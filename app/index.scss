@@ -1,0 +1,125 @@
+
+// VARIABLES
+:root {
+	--safeAreaTop: env(safe-area-inset-top);
+	--safeAreaBottom: env(safe-area-inset-bottom);
+	--pageWidth: min(1100px, calc(100vw - 40px));
+	--navBarHeight: calc(var(--safeAreaTop) + 44px);
+	--navBarDesktopHeight: calc(var(--safeAreaTop) + 74px);
+	// background: radial-gradient(circle at top, rgb(20,20,20), rgb(8,8,8) 30%) rgb(8,8,8) no-repeat; for later
+}
+
+
+// DOCUMENT STYLING
+html {
+	color: #fff;
+	font-size: 17px;
+	line-height: 1.4;
+	white-space: pre-line;
+	user-select: none; -moz-user-select: none; -webkit-user-select: none;
+	touch-action: manipulation;
+}
+
+// TABLET SPECIFIC STYLING
+$TABLET: 600px;
+@media all and (min-width: $TABLET) and (min-height: $TABLET) {
+	html { font-size: 18px }
+
+	.COLUMN.ROWIFY { flex-direction: row }
+	.COLUMN.ROWIFY.SPACED > * { margin-bottom: 0; margin-right: 16px }
+	.COLUMN.ROWIFY.SPACED.WIDE > * { margin-right: 24px }
+	.COLUMN.ROWIFY.SPACED.TIGHT > * { margin-right: 8px }
+	
+	.Sidemenu { max-width: 30% }
+
+	.ImgPoster { --width: 100% !important }
+	.Grid > * { width: calc(25% - 8px) }
+	.isEpisodic .Grid > * { width: calc(33.3% - 8px) }
+}
+
+
+// DESKTOP SPECIFIC STYLING
+$DESKTOP: 1100px;
+@media all and (min-width: $DESKTOP) {
+	html { font-size: 19px }
+
+	.Grid > * { width: calc(20% - 8px) }
+}
+
+
+// UNIVERSAL COMPONENTS
+.PRE { white-space: pre; }
+.SPACED > * { margin-bottom: 16px; margin-right: 16px }
+.SPACED.WIDE > * { margin-bottom: 24px; margin-right: 24px }
+.SPACED.TIGHT > * { margin-bottom: 8px; margin-right: 8px }
+.SPACED.COLUMN > * { margin-right: 0 }
+.SPACED:not(.COLUMN) > * { margin-bottom: 0 }
+.SPACED > *:last-child { margin-bottom: 0 !important; margin-right: 0 !important }
+
+
+// SEANS CSS
+.SELFCENTER { align-self: center }
+.SELFSTART {align-self:flex-start;}
+.SELFEND {align-self:flex-end;}
+.JUSTIFYSTART { justify-content: flex-start }
+.JUSTIFYEND { justify-content: flex-end }
+.ALIGNSTART { align-items: flex-start }
+.ALIGNEND { align-items: flex-end }
+
+.TITLE {font-size: 2.2em}
+.HEADER {font-size: 1.2em}
+.SUB-HEADER {font-size: 1.1em}
+.BODY {font-size: .9em}
+
+
+.OPAQUE {opacity: .6}
+
+.ELLIPSIS {
+	display: block;
+	width: inherit;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// todo add INHERIT, change classes -> string type not array, maybe find a solution to the classes override
+
+
+// /* PLACEMENT */
+// .MAX { width: 100%; height: 100% }
+// .MAXWIDTH { width: 100% }
+// .MAXHEIGHT { height: 100% }
+// .COLUMN { flex-direction: column }
+// .SPREAD { justify-content: space-between }
+// .WRAP { flex-wrap: wrap }
+// .LEFT { justify-content: flex-start }
+// .RIGHT { justify-content: flex-end }
+// .TOP { align-items: flex-start }
+// .BOTTOM { align-items: flex-end }
+
+// /* OBJECTS */
+// .Controller { width: 100%; min-height: 100% }
+// .Controller > .Pop { display: none }
+// .Image { background: center center no-repeat; background-size: contain; }
+// .Button { cursor: pointer; user-select: none; -moz-user-select: none; -webkit-user-select: none; }
+
+// /* TEXT */
+// .TEXTLEFT { text-align: left; }
+// .TEXTRIGHT { text-align: right; }
+// .TEXTCENTER { text-align: center; }
+// .TEXTJUSTIFY { text-align: justify; }
+// .HEAVY { font-weight: 800 }
+// .BOLD { font-weight: 700 }
+// .SEMIBOLD { font-weight: 600 }
+// .MEDIUM { font-weight: 500 }
+// .REGULAR { font-weight: 400 }
+// .LIGHT { font-weight: 300 }
+// .THIN { font-weight: 200 }
+// .UPPERCASE { text-transform: uppercase; }
+// .LOWERCASE { text-transform: lowercase; }
+// .CAPITALIZE { text-transform: capitalize; }
+
+// /* ANIMATIONS, OVERRIDE FOR DIFFERENT TIMINGS */
+// .HIDDEN { opacity: 0 }
+// .FADEIN { animation: FADEIN 0.6s linear } 
+// .FADEOUT { animation: FADEIN 0.6s linear }

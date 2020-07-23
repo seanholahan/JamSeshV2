@@ -1,0 +1,23 @@
+
+.ImgLoading { width: 70px; height: 70px; opacity: 0.8; }
+.ImgCircuit { width: 190px; height: 130px }
+.NavBarDesktop .ImgCircuit { width: 70px; height: 70px; }
+.ImgFBI, .ImgHomeland, .ImgPiracy { width: 120px; height: 120px; }
+
+.ImgSearch, .ImgHome, .ImgAccount, .ImgBack { width: 44px; height: 44px }
+.ImgSearch { background-size: 56% !important }
+.ImgAccount, .ImgHome { background-size: 77% !important }
+
+.ImgBack { transform: rotate(90deg); background-size: 100% !important; width: 22px; }
+.ImgArrowRight { transform: rotate(-90deg); background-size: 100% !important; width: 22px; height: 22px; }
+
+.ImgPoster {
+	--width: 100%;
+	width: var(--width);
+	padding-top: calc(var(--width) * 1.5);
+	background-size: cover !important;
+	border-radius: 8px;
+
+	.Detail:not(.isEpisodic) & { --width: 50% }
+	.isEpisodic & { padding-top: calc(var(--width) * 0.5) }
+}

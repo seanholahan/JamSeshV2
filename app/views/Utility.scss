@@ -1,0 +1,57 @@
+
+.Header {
+	font-size: 1.8em;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.HeaderBorder {
+	border-bottom: 0.5px solid rgba(255,255,255,0.3);
+	padding-bottom: 14px;
+}
+
+.SubHeader {
+	font-size: 1.3em;
+}
+
+.SubHeaderBorder {
+	border-top: 1px solid rgba(255,255,255,0.1);
+	padding-top: 15px;
+}
+
+.ErrorMessage {
+	color: red;
+	font-size: 0.95em;
+}
+
+.Setting {
+	border-radius: 8px;
+	&.Active { background-color: rgba(white, 0.1); font-weight: 700 }
+}
+
+.ScrollBox {
+	height: 300px;
+	overflow: scroll;
+	border: 3px solid rgba(255,255,255,0.2);
+	border-radius: 4px;
+	padding: 3%;
+	font-size: 0.9em;
+	* { flex-shrink: 0 }
+}
+
+.Grid > * {
+	width: calc(50% - 6px);
+	margin-bottom: 8px;
+	&.Filler { margin: 0 }
+}
+
+.BackButtonWithText:hover {
+	opacity: 1;
+}
+
+.Box {
+	background-color: var(--submitBackground);
+	border-radius: 12px;
+	padding: 16px;
+	.SubHeaderBorder { border: 0; padding: 0 }
+}

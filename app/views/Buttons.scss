@@ -1,0 +1,81 @@
+
+:root { 
+	--inputBorder: 4px solid rgba(255,255,255,0.14);
+	--inputBackground: rgba(255,255,255,0.03);
+	--inputPlaceholderColor: #888;
+	--submitBackground: rgba(255,255,255, 0.08);
+	--submitBackgroundHover: rgba(255,255,255, 0.13);
+}
+
+.Input, .Submit {
+	background-color: var(--inputBackground);
+	border: var(--inputBorder);
+	border-radius: 8px;
+	padding: 12px;
+	font-size: 0.95em;
+	font-weight: 400;
+	transition: all 0.3s;
+}
+
+.Submit {
+	background-color: var(--submitBackground);
+	font-weight: 700;
+	border-color: transparent;
+
+	.Image {
+		height: 20px; width: 20px;
+		background-size: 140%;
+		margin-right: 8px;
+	}
+}
+
+.Submit, .PIN {
+	max-width: 210px;
+	text-align: center;
+}
+
+.Input::placeholder { color: var(--inputPlaceholderColor) }
+.Disabled .Input::placeholder { opacity: 0; }
+.Submit:hover { background-color: var(--submitBackgroundHover); }
+.Submit.Disabled { opacity: 0.5; pointer-events: none; }
+
+.Link {
+	text-decoration: underline;
+}
+
+.Checkbox {
+	appearance: checkbox;
+	-webkit-appearance: checkbox;
+	-moz-appearance: checkbox;
+}
+
+.Select {
+	background: url("/images/angle-arrow-down.svg") no-repeat right 14px center;
+	background-color: var(--inputBackground);
+	background-size: 20px;
+}
+
+.Select, .Option {
+	text-align: center;
+}
+.BackButtonWithText.InActive {
+	display: none;
+}
+.BackButtonWithText {
+	height: 20px;
+	justify-content: flex-start;
+	align-items: center;
+	opacity: .6;
+	transition: all 300ms;
+	.BackIcon {
+		width: 20px;
+		margin-right: 5px;
+		height: 18px;
+	}
+	.Text {
+		width: auto;
+		font-size: 15px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+}

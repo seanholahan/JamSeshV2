@@ -1,0 +1,14 @@
+
+.NavBar, .NavBarDesktop {
+	padding-top: var(--safeAreaTop);
+	position: fixed; top: 0; left: 0; z-index: 100;
+	// background-color: rgba(white, 0.04);
+	// border-bottom: 0.5px solid rgba(white, 0.12);
+	// box-shadow: 0 1px 10px rgba(black, 0.1);
+	backdrop-filter: brightness(170%) blur(30px);
+	-webkit-backdrop-filter: brightness(170%) blur(30px);
+	.Inner { width: calc(var(--pageWidth) + 18px) }
+}
+
+.NavBar { height: var(--navBarHeight); font-size: 1.3em; }
+.NavBarDesktop { height: var(--navBarDesktopHeight); font-size: 1.4em; }

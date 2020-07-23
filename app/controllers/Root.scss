@@ -1,0 +1,11 @@
+
+.NavController { width: var(--pageWidth) !important }
+.NavLogin { max-width: 800px }
+
+.NavController > .Controller { padding-bottom: 40px }
+
+.NavBar + .NavMain > .Controller { padding-top: calc(var(--navBarHeight) + 20px) }
+.NavBarDesktop + .NavMain > .Controller { padding-top: calc(var(--navBarDesktopHeight) + 40px) }
+.NavBarDesktop + .NavMain > .Controller.BitPlayer { padding-top: 0px }
+
+
